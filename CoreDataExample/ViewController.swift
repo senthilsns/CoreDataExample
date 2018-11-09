@@ -34,6 +34,11 @@ class ViewController: UIViewController {
         positionField.text = ""
     }
     
+    /*  1. NSEntityDescription is used for find the Entity.
+        2. NSManagedObject will create new object in the Entity.
+        3. save() method is used for save the context. */
+    
+    //MARK: CoreData -> Save
     func saveInDB (username:String,position:String) {
         
         // Core Data ---> Save

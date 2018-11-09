@@ -62,11 +62,27 @@
                                 <color key="textColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9V-UD-6Gs">
+                                <rect key="frame" x="105" y="293" width="110" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aHm-ao-coU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bXX-OO-dHl"/>
+                                    <segue destination="toN-YR-2TF" kind="show" id="jgQ-gF-Tyi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qnr-zc-wmo" firstAttribute="centerX" secondItem="8If-TU-hTV" secondAttribute="centerX" id="6Bp-Vp-bhd"/>
                             <constraint firstItem="8If-TU-hTV" firstAttribute="top" secondItem="31g-XO-xqo" secondAttribute="bottom" constant="15" id="HM7-Jx-PCW"/>
+                            <constraint firstItem="z9V-UD-6Gs" firstAttribute="trailing" secondItem="qnr-zc-wmo" secondAttribute="trailing" id="LME-SB-WOP"/>
                             <constraint firstItem="8If-TU-hTV" firstAttribute="trailing" secondItem="31g-XO-xqo" secondAttribute="trailing" id="MCD-kk-nGa"/>
                             <constraint firstItem="pHG-TO-vy7" firstAttribute="trailing" secondItem="8If-TU-hTV" secondAttribute="trailing" id="Mme-gd-cng"/>
                             <constraint firstItem="8If-TU-hTV" firstAttribute="leading" secondItem="31g-XO-xqo" secondAttribute="leading" id="Oab-yu-VRB"/>
@@ -76,6 +92,8 @@
                             <constraint firstItem="31g-XO-xqo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="eBr-UV-RlY"/>
                             <constraint firstItem="pHG-TO-vy7" firstAttribute="leading" secondItem="8If-TU-hTV" secondAttribute="leading" id="fcd-nT-0b1"/>
                             <constraint firstItem="qnr-zc-wmo" firstAttribute="top" secondItem="8If-TU-hTV" secondAttribute="bottom" constant="26" id="heG-f2-Klc"/>
+                            <constraint firstItem="z9V-UD-6Gs" firstAttribute="leading" secondItem="qnr-zc-wmo" secondAttribute="leading" id="sZZ-Mw-xGY"/>
+                            <constraint firstItem="z9V-UD-6Gs" firstAttribute="top" secondItem="qnr-zc-wmo" secondAttribute="bottom" constant="37" id="tnh-aJ-XWs"/>
                             <constraint firstItem="pHG-TO-vy7" firstAttribute="top" secondItem="qnr-zc-wmo" secondAttribute="bottom" constant="75" id="v68-kt-nR5"/>
                             <constraint firstItem="31g-XO-xqo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yJT-fR-Ksr"/>
                         </constraints>
@@ -192,7 +210,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hJL-Oz-mjR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jba-mb-lY7">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

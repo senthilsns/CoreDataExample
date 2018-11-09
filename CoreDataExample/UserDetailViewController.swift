@@ -27,7 +27,7 @@ class UserDetailViewController: UIViewController,UITableViewDelegate,UITableView
         
     }
     
-    
+    //MARK: CoreData -> Fetch
     func fetchDetails() {
         
         // Core Data ---> Fetch
@@ -57,6 +57,29 @@ class UserDetailViewController: UIViewController,UITableViewDelegate,UITableView
 
     }
     
+    
+    //MARK: CoreData -> Delete
+    func deletePersonDetails(indexPath:IndexPath){
+
+        // Step 1: Container is set up in the AppDelegates so we need to refer that container.
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+         // Step 2: We need to create a context from this container
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        // Step 3: Remove the deleted item from the model
+        managedContext.delete(personDetails[indexPath.row]as NSManagedObject)
+        personDetails.remove(at: indexPath.row)
+        
+        // Step 4: Remove Data from Table View with Animation
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        
+        do{
+            try managedContext.save()
+        } catch {
+            print(error)
+        }
+    }
 }
 
 
@@ -88,6 +111,28 @@ extension UserDetailViewController {
         return 80.0
     }
     
-
     
+   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    
+    if editingStyle == .delete {
+        
+        deletePersonDetails(indexPath: indexPath)
+    
+//        // remove the deleted item from the model
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+//        let managedContext = appDelegate.persistentContainer.viewContext
+//        managedContext.delete(personDetails[indexPath.row]as NSManagedObject)
+//
+//        personDetails.remove(at: indexPath.row)
+//        tableView.deleteRows(at: [indexPath], with: .fade)
+//
+//        do{
+//            try managedContext.save()
+//        } catch {
+//            print(error)
+//        }
+      }
+    }
+
 }
+
