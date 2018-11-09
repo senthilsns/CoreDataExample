@@ -57,14 +57,15 @@ class ViewController: UIViewController {
         do {
             // Save Person Details
             try managedContext.save()
-          // Clear Text Fields
-            clear()
-            
+            // Additional
+            additionalThings()
+
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +74,16 @@ class ViewController: UIViewController {
 
     }
 
+    func additionalThings() {
+        
+        // Clear Text Fields
+        clear()
+        statusLabel.text = "Data Saved !!!"
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "UserDetailViewController") as? UserDetailViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
 
 }
 
