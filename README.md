@@ -8,11 +8,24 @@ Action:
 
 1. Save
 
-      a. NSEntityDescription is used for find the Entity.
       
-      b. NSManagedObject will create new object in the Entity.
+      a. Refer to persistentContainer from appdelegate
       
-      c. save() method is used for save the context.
+      b. Create the context from persistentContainer
+      
+      c. Create an entity with UserDetail
+      
+      d. Create new record with this User Entity
+      
+      e. Set values for the records for each key
       
       
 2. Fetch
+
+      a. Prepare the request of type NSFetchRequest for the entity (UserDetail)
+      
+      b. If required use predicate for filter data
+      
+      c. Fetch the result from context in the form of array of [NSManagedObject]
+      
+      d. Iterate through an array to get value for the specific key
