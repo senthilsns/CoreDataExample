@@ -29,3 +29,11 @@ Action:
       c. Fetch the result from context in the form of array of [NSManagedObject]
       
       d. Iterate through an array to get value for the specific key
+      
+3. Delete
+
+      a. Prepare the request with predicate for the entity (UserDetail in our example)
+      
+      b. Fetch record and which we want to delete
+      
+      c. And make context.delete(object) call 
