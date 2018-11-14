@@ -22,9 +22,15 @@ class UserDetailViewController: UIViewController,UITableViewDelegate,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         // Do any additional setup after loading the view.
         fetchDetails()
-        
     }
     
     //MARK: CoreData -> Fetch
@@ -117,22 +123,22 @@ extension UserDetailViewController {
     if editingStyle == .delete {
         
         deletePersonDetails(indexPath: indexPath)
-    
-//        // remove the deleted item from the model
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//        managedContext.delete(personDetails[indexPath.row]as NSManagedObject)
-//
-//        personDetails.remove(at: indexPath.row)
-//        tableView.deleteRows(at: [indexPath], with: .fade)
-//
-//        do{
-//            try managedContext.save()
-//        } catch {
-//            print(error)
-//        }
+        
       }
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt
+        indexPath: IndexPath){
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "UpdateUserDetailViewController") as? UpdateUserDetailViewController
+        let person = personDetails[indexPath.row]
+        vc?.usernameStr = (person.value(forKey: "username") as? String)!
+        vc?.positionStr = (person.value(forKey: "position") as? String)!
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+    }
+    
 
 }
 

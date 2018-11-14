@@ -89,6 +89,16 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
+    
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt
+        indexPath: IndexPath){
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "UpdateUserDetailViewController") as? UpdateUserDetailViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+    }
 
 }
 

@@ -30,17 +30,7 @@ Action:
       
       d. Iterate through an array to get value for the specific key
       
-      
-3. Update
-
-      a. Prepare the request with predicate for the entity (UserDetail)
-      
-      b. Fetch record and Set New value with key
-      
-      C. Last Save context same as create data.
-      
-      
-4. Delete
+3. Delete
 
       a. Prepare the request with predicate for the entity (UserDetail in our example)
       

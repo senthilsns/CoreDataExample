@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D3ECCFA219BDF4400B52132 /* UpdateUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3ECCF9219BDF4400B52132 /* UpdateUserDetailViewController.swift */; };
 		8D4A5D61219556CC00063339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4A5D60219556CC00063339 /* AppDelegate.swift */; };
 		8D4A5D63219556CC00063339 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4A5D62219556CC00063339 /* ViewController.swift */; };
 		8D4A5D66219556CC00063339 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D4A5D64219556CC00063339 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D3ECCF9219BDF4400B52132 /* UpdateUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserDetailViewController.swift; sourceTree = "<group>"; };
 		8D4A5D5D219556CC00063339 /* CoreDataExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4A5D60219556CC00063339 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D4A5D62219556CC00063339 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				8D4A5D60219556CC00063339 /* AppDelegate.swift */,
 				8D4A5D62219556CC00063339 /* ViewController.swift */,
 				8D4A5D7521955A2800063339 /* UserDetailViewController.swift */,
+				8D3ECCF9219BDF4400B52132 /* UpdateUserDetailViewController.swift */,
 				8D4A5D7721955B0B00063339 /* UserDetailCell.swift */,
 				8D4A5D64219556CC00063339 /* Main.storyboard */,
 				8D4A5D6A219556CF00063339 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				8D4A5D63219556CC00063339 /* ViewController.swift in Sources */,
 				8D4A5D7821955B0B00063339 /* UserDetailCell.swift in Sources */,
 				8D4A5D61219556CC00063339 /* AppDelegate.swift in Sources */,
+				8D3ECCFA219BDF4400B52132 /* UpdateUserDetailViewController.swift in Sources */,
 				8D4A5D7621955A2800063339 /* UserDetailViewController.swift in Sources */,
 				8D4A5D69219556CC00063339 /* CoreDataExample.xcdatamodeld in Sources */,
 			);
